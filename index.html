@@ -10,21 +10,14 @@
 </head>
 <body>
   <app-root></app-root>
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALUF2KzFk7jOKYiEWh9pgu5rTh0R3djvQ&callback=initMap"></script>
-  <script>
-    function initMap() {
-      var location = { lat: -23.349414, lng: -47.865651}; // Substitua pelas coordenadas desejadas
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 15,
-        center: location
-      });
-      var marker = new google.maps.Marker({
-        position: location,
-        map: map
-      });
-    }
-  </script>
   
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+  intent="WELCOME"
+  chat-title="TCC"
+  agent-id="d6b93864-25c2-4c77-b079-a902545899d9"
+  language-code="pt-br"
+></df-messenger>
 </body>
 </html>
 
